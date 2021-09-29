@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calender {
+  width: 600px;
+  margin: 50px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#viewyear {
+  width: 100px;
+  height: 30px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.viewmonth {
+  font-size: 35px;
+}
+
+.nav-btn {
+  margin: 15px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  font-size: 30px;
+  background-color: bisque;
+  cursor: pointer;
+  color: grey;
+}
+
+.days {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 25px 10px;
+}
+
+.dates {
+  display: flex;
+  flex-flow: row wrap;
+  height: 500px;
+  border-top: 1px solid #333333;
+  border-right: 1px solid #333333;
+}
+
+.date {
+  width: calc(100% / 7);
+  padding: 15px;
+  text-align: right;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #333333;
+}
+
+.other {
+  opacity: 0.3;
+}
+
+.date:nth-child(7n) {
+  color: red;
+}
+
+.date:nth-child(7n + 1) {
+  color: blue;
+}
+
+.today {
+  position: relative;
+  color: #ffffff;
+}
+
+.today::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #ffc400;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+}
+
+/* .today {
+  background: #ffc400;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 3px;
+} */
