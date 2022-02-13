@@ -115,4 +115,8 @@ function showToday() {
   }
 }
 
-
+// 값 조회 요청
+const getEvents = () => {
+  axios.get("/api/events", {params: {month: 4, day: 16}}).then((response) => console.log(response));
+};
+getEvents();

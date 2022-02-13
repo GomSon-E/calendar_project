@@ -6,7 +6,7 @@ const eventSchema = mongoose.Schema({
     maxlength: 50,
     required: true,
   },
-  explanations: {
+  description: {
     type: String,
   },
   year: {
@@ -23,10 +23,6 @@ const eventSchema = mongoose.Schema({
     type: Number,
     max: 31,
     required: true,
-  },
-  _id : {
-      type: Number,
-      max: 8
   }
 });
 
