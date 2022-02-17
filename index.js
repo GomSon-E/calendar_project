@@ -42,11 +42,23 @@ app.listen(port, () => {
   console.log(`Server Listening on ${port}`);
 });
 
-// 값 조회 요청 처리
+// // 값 조회 요청 처리
+// app.get("/api/events", (req, res) => {
+//   Event.find(
+//     { month: req.query.month, day: req.query.day },
+//     function (error, events) {
+//       if (error) {
+//         console.log("error::" + error);
+//       } else {
+//         res.send(events);
+//       }
+//     }
+//   );
+// });
+
+// 값 조회 요청 처리 (전체)
 app.get("/api/events", (req, res) => {
-  Event.find(
-    { month: req.query.month, day: req.query.day },
-    function (error, events) {
+  Event.find(function (error, events) {
       if (error) {
         console.log("error::" + error);
       } else {

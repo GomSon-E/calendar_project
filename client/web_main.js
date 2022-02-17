@@ -115,8 +115,14 @@ function showToday() {
   }
 }
 
-// 값 조회 요청
+// // 값 조회 요청
+// const getEvents = () => {
+//   axios.get("/api/events", {params: {month: 4, day: 16}}).then((response) => console.log(response));
+// };
+// getEvents();
+
+// 값 조회 요청 (전체)
 const getEvents = () => {
-  axios.get("/api/events", {params: {month: 4, day: 16}}).then((response) => console.log(response));
+  axios.get("/api/events").then((response) => console.log(response));
 };
 getEvents();
